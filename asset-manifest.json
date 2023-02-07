@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/game_vistas/static/css/main.5bc93b1b.chunk.css",
+    "main.js": "/game_vistas/static/js/main.2a412631.chunk.js",
+    "main.js.map": "/game_vistas/static/js/main.2a412631.chunk.js.map",
+    "runtime-main.js": "/game_vistas/static/js/runtime-main.2c919f24.js",
+    "runtime-main.js.map": "/game_vistas/static/js/runtime-main.2c919f24.js.map",
+    "static/js/2.e1917bf5.chunk.js": "/game_vistas/static/js/2.e1917bf5.chunk.js",
+    "static/js/2.e1917bf5.chunk.js.map": "/game_vistas/static/js/2.e1917bf5.chunk.js.map",
+    "index.html": "/game_vistas/index.html",
+    "precache-manifest.1f9bce4b11a39f17b6f11fcceea65523.js": "/game_vistas/precache-manifest.1f9bce4b11a39f17b6f11fcceea65523.js",
+    "service-worker.js": "/game_vistas/service-worker.js",
+    "static/css/main.5bc93b1b.chunk.css.map": "/game_vistas/static/css/main.5bc93b1b.chunk.css.map",
+    "static/js/2.e1917bf5.chunk.js.LICENSE.txt": "/game_vistas/static/js/2.e1917bf5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c919f24.js",
+    "static/js/2.e1917bf5.chunk.js",
+    "static/css/main.5bc93b1b.chunk.css",
+    "static/js/main.2a412631.chunk.js"
+  ]
+}
