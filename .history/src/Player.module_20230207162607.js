@@ -12,7 +12,7 @@ console.log(process.env.PUBLIC_URL)
         <img className={player.icon} src={"/assets/icons/previous.png"} alt="" />
       </div>
 
-      <img className={player.mainImage} src={"https://princep0lo.github.io/game_vistas/assets/images/Oblivion/Oblivion%20(1).jpg"} alt="" />
+      <img className={player.mainImage} src={https://princep0lo.github.io/game_vistas/assets/images/Oblivion/Oblivion%20(1).jpg} alt="" />
 
 
       <div className={[player.arrowButton, props.showButtons].join(" ")} onClick={() => props.selectedImage < props.imageLength && props.setSelectedImage((state) => state + 1)} onMouseOver={() => props.setTooltip("Show next image (right arrow or d)")} onMouseLeave={() => props.setTooltip("")}>
