@@ -12,7 +12,9 @@ const PlayerModule = (props) => {
         <img className={player.icon} src={"/assets/icons/previous.png"} alt="" />
       </div>
 
-      <img className={player.mainImage} src={process.env.PUBLIC_URL + "/assets/images/" + props.shortTitle + "/" + props.shortTitle + " (" + props.selectedImage + ").jpg"} alt="" />
+      <img className={player.mainImage} src={"/assets/images/" + props.shortTitle + "/" + props.shortTitle + " (" + props.selectedImage + ").jpg"} alt="" />
+
+      <img className={player.mainImage} src={require("/assets/images/" + props.shortTitle + "/" + props.shortTitle + " (" + props.selectedImage + ").jpg")} alt="" /> 
 
 
       <div className={[player.arrowButton, props.showButtons].join(" ")} onClick={() => props.selectedImage < props.imageLength && props.setSelectedImage((state) => state + 1)} onMouseOver={() => props.setTooltip("Show next image (right arrow or d)")} onMouseLeave={() => props.setTooltip("")}>
