@@ -16,7 +16,7 @@ const PlayerModule = (props) => {
 
 
       <div className={[player.arrowButton, props.showButtons].join(" ")} onClick={() => props.selectedImage < props.imageLength && props.setSelectedImage((state) => state + 1)} onMouseOver={() => props.setTooltip("Show next image (right arrow or d)")} onMouseLeave={() => props.setTooltip("")}>
-        <img className={[player.icon].join(" ")} src={process.env.PUBLIC_URL + "/assets/icons/next.png"} alt="" />
+        <img className={[player.icon].join(" ")} src={process.env.PUBLIC_URL"/assets/icons/next.png"} alt="" />
       </div>
       <img className={[player.rewindButton, props.showButtons, player.rotateHorizontal].join(" ")} onClick={() => props.setSelectedImage(props.imageLength)} onMouseOver={() => props.setTooltip("Rewind to last image")} onMouseLeave={() => props.setTooltip("")} src={"/assets/icons/rewind.png"} alt="" />
     </div>
