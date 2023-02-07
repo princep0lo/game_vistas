@@ -19,11 +19,13 @@ const App = () => {
   const [buttonState, setButtonState] = useState(null);
 
   const games = [
-    { title: "The Elder Scrolls IV: Oblivion", imageLength: 169, shortTitle: "Oblivion" },
-    { title: "Overwatch II", imageLength: 2, shortTitle: "Overwatch" },
-    { title: "Microsoft Flight Simulator", imageLength: 13, shortTitle: "Flightsim" },
-    { title: "Stardew Valley", imageLength: 11, shortTitle: "Stardew" },
-    { title: "Horizon Zero Dawn", imageLength: 40, shortTitle: "Horizon" },
+    { title: "Biała Podlaska", imageLength: 32, shortTitle: "Biala" },
+    { title: "Gdynia", imageLength: 46, shortTitle: "Gdynia" },
+    { title: "Szczecin", imageLength: 26, shortTitle: "Szczecin" },
+    { title: "Bergamo", imageLength: 21, shortTitle: "Bergamo" },
+    { title: "Rzym", imageLength: 61, shortTitle: "Rzym" },
+    { title: "Mediolan", imageLength: 30, shortTitle: "Mediolan" },
+
   ];
 
   useEffect(() => {
