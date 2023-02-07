@@ -10,7 +10,6 @@ const ColorPicker = (props) => {
       <div className={[colorpicker.colorButton, colorpicker.darkblue].join(" ")} onClick={() => props.setBackground(colorpicker.darkblue)}></div>
       <div className={[colorpicker.colorButton, colorpicker.purple].join(" ")} onClick={() => props.setBackground(colorpicker.purple)}></div>
       <div className={[colorpicker.colorButton, colorpicker.darkgreen].join(" ")} onClick={() => props.setBackground(colorpicker.darkgreen)}></div>
-      <div className={[colorpicker.colorButton, colorpicker.white].join(" ")} onClick={() => props.setBackground(colorpicker.white)}></div>
     </div>
   );
 };

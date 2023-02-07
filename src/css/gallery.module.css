@@ -19,7 +19,12 @@
     display: flex;
     align-self: center;
     margin-top: 1vw;
+    transition: 0.5s;
+    filter: opacity(0.05);
+  }
 
+  .gallery:hover{
+    filter: opacity(1);
   }
 
   .currentImage{

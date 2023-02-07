@@ -16,14 +16,14 @@ const App = () => {
   const [tooltip, setTooltip] = useState("");
   const [viewMode, setViewMode] = useState(player.normal);
   const [selectedGame, setSelectedGame] = useState(0);
-  const [buttonState, setButtonState] = useState(null);
+  const [zoomImage, toggleZoomImage] = useState(false);
 
   const games = [
-    { title: "The Elder Scrolls IV: Oblivion", imageLength: 169, shortTitle: "Oblivion" },
+    { title: "Horizon Zero Dawn", imageLength: 49, shortTitle: "Horizon" },
     { title: "Overwatch II", imageLength: 2, shortTitle: "Overwatch" },
     { title: "Microsoft Flight Simulator", imageLength: 13, shortTitle: "Flightsim" },
     { title: "Stardew Valley", imageLength: 11, shortTitle: "Stardew" },
-    { title: "Horizon Zero Dawn", imageLength: 40, shortTitle: "Horizon" },
+    { title: "The Elder Scrolls IV: Oblivion", imageLength: 169, shortTitle: "Oblivion" },
   ];
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const App = () => {
       } else if (event.key === "ArrowRight" || event.key === "d") {
         selectedImage < games[selectedGame].imageLength && setSelectedImage((state) => state + 1);
       } else if (event.key === " ") {
-        viewMode === player.wide ? setViewMode(player.normal) : setViewMode(player.wide);
+        zoomImage === false ? toggleZoomImage(true) : toggleZoomImage(false);
       } else if (event.key === "ArrowDown" || event.key === "s") {
         selectedGame < games.length - 1 && setSelectedGame((state) => state + 1);
       } else if (event.key === "ArrowUp" || event.key === "w") {
@@ -77,7 +77,7 @@ const App = () => {
       <ColorPicker setBackground={setBackground} />
       <ViewMode setViewMode={setViewMode} />
 
-      <PlayerModule viewMode={viewMode} selectedImage={selectedImage} setSelectedImage={setSelectedImage} showButtons={showButtons} setShowButtons={setShowButtons} setTooltip={setTooltip} imageLength={games[selectedGame].imageLength} title={games[selectedGame].title} shortTitle={games[selectedGame].shortTitle} buttonState={buttonState} />
+      <PlayerModule viewMode={viewMode} selectedImage={selectedImage} setSelectedImage={setSelectedImage} showButtons={showButtons} setShowButtons={setShowButtons} setTooltip={setTooltip} imageLength={games[selectedGame].imageLength} title={games[selectedGame].title} shortTitle={games[selectedGame].shortTitle} zoomImage={zoomImage} toggleZoomImage={toggleZoomImage}/>
 
       <Gallery selectedImage={selectedImage} setSelectedImage={setSelectedImage} setTooltip={setTooltip} imageLength={games[selectedGame].imageLength} title={games[selectedGame].title} shortTitle={games[selectedGame].shortTitle} />
     </div>
