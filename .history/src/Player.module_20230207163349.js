@@ -15,9 +15,9 @@ console.log(process.env.PUBLIC_URL)
       <img className={player.mainImage} src={process.env.PUBLIC_URL + "/assets/images/" + props.shortTitle + "/" + props.shortTitle + " (" + props.selectedImage + ").jpg"} alt="" />
 
       <div className={[player.arrowButton, props.showButtons].join(" ")} onClick={() => props.selectedImage < props.imageLength && props.setSelectedImage((state) => state + 1)} onMouseOver={() => props.setTooltip("Show next image (right arrow or d)")} onMouseLeave={() => props.setTooltip("")}>
-        <img className={[player.icon].join(" ")} src={process.env.PUBLIC_URL + "/assets/icons/next.png"} alt="" />
+        <img className={[player.icon].join(" ")} src={"/assets/icons/next.png"} alt="" />
       </div>
-      <img className={[player.rewindButton, props.showButtons, player.rotateHorizontal].join(" ")} onClick={() => props.setSelectedImage(props.imageLength)} onMouseOver={() => props.setTooltip("Rewind to last image")} onMouseLeave={() => props.setTooltip("")} src={process.env.PUBLIC_URL + "/assets/icons/rewind.png"} alt="" />
+      <img className={[player.rewindButton, props.showButtons, player.rotateHorizontal].join(" ")} onClick={() => props.setSelectedImage(props.imageLength)} onMouseOver={() => props.setTooltip("Rewind to last image")} onMouseLeave={() => props.setTooltip("")} src={"/assets/icons/rewind.png"} alt="" />
     </div>
   );
 };
