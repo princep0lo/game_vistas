@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./css/app.css";
-import player from "./css/player.module.css";
 import gameslist from "./css/gameslist.module.css";
 import PlayerModule from "./Player.module";
-import ViewMode from "./ViewMode.module";
 import ColorPicker from "./ColorPicker.module";
 import GameTitle from "./GameTitle.module";
 import Tooltip from "./Tooltip.module";
@@ -14,13 +12,12 @@ const App = () => {
   const [background, setBackground] = useState(styles.white);
   const [showButtons, setShowButtons] = useState(false);
   const [tooltip, setTooltip] = useState("");
-  const [viewMode, setViewMode] = useState(player.normal);
   const [selectedGame, setSelectedGame] = useState(0);
   const [zoomImage, toggleZoomImage] = useState(false);
 
   const games = [
-    { title: "Horizon Zero Dawn", imageLength: 49, shortTitle: "Horizon" },
-    { title: "Overwatch II", imageLength: 2, shortTitle: "Overwatch" },
+    { title: "Horizon Zero Dawn", imageLength: 64, shortTitle: "Horizon" },
+    { title: "Overwatch II", imageLength: 5, shortTitle: "Overwatch" },
     { title: "Microsoft Flight Simulator", imageLength: 13, shortTitle: "Flightsim" },
     { title: "Stardew Valley", imageLength: 11, shortTitle: "Stardew" },
     { title: "The Elder Scrolls IV: Oblivion", imageLength: 169, shortTitle: "Oblivion" },
@@ -75,9 +72,8 @@ const App = () => {
       <GameTitle gameTitle={games[selectedGame].title} />
       <Tooltip tooltip={tooltip} />
       <ColorPicker setBackground={setBackground} />
-      <ViewMode setViewMode={setViewMode} />
 
-      <PlayerModule viewMode={viewMode} selectedImage={selectedImage} setSelectedImage={setSelectedImage} showButtons={showButtons} setShowButtons={setShowButtons} setTooltip={setTooltip} imageLength={games[selectedGame].imageLength} title={games[selectedGame].title} shortTitle={games[selectedGame].shortTitle} zoomImage={zoomImage} toggleZoomImage={toggleZoomImage}/>
+      <PlayerModule selectedImage={selectedImage} setSelectedImage={setSelectedImage} showButtons={showButtons} setShowButtons={setShowButtons} setTooltip={setTooltip} imageLength={games[selectedGame].imageLength} title={games[selectedGame].title} shortTitle={games[selectedGame].shortTitle} zoomImage={zoomImage} toggleZoomImage={toggleZoomImage}/>
 
       <Gallery selectedImage={selectedImage} setSelectedImage={setSelectedImage} setTooltip={setTooltip} imageLength={games[selectedGame].imageLength} title={games[selectedGame].title} shortTitle={games[selectedGame].shortTitle} />
     </div>
